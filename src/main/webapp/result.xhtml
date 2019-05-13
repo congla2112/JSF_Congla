@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <title>Demo JSF</title>
+</h:head>
+<h:body>
+  <h:link value="Index" outcome="index"></h:link><br/>
+  <h:form>
+  	Name: <h:outputText value="#{inforBean.name}" /><br/>
+  	Pass: <h:outputText value="#{inforBean.password}" /><br/>
+  	Gender: <h:outputText value="#{inforBean.gender}" /><br/>
+  	Favorites: <ui:repeat value="#{inforBean.favorites}" var="favorites" >
+  					<h:outputText value="#{favorites}" />
+  			  </ui:repeat><br/>
+  	Skill: <ui:repeat value="#{inforBean.skills}" var="skill" >
+  					<h:outputText value="#{skill}" />
+  			  </ui:repeat><br/>
+  	Title: <h:outputText value="#{inforBean.title}" /><br/>
+  
+  </h:form>
+</h:body>
+</html>

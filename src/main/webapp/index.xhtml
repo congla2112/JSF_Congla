@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:st="http://shinka.com/facelets">
+<h:head>
+	<title>Demo JSF</title>
+</h:head>
+<h:body>
+
+	<ui:composition template="Template/common.xhtml">
+		 <ui:define name="content"> 
+		
+			<h:form>
+				<h:inputText value="#{helloBean.name}"></h:inputText>
+				<h:commandButton action="#{helloBean.sayHello()}" value="Welcome Me"></h:commandButton><br/>
+				<h:link value="Infomation" outcome="information"></h:link>
+				<st:customInput ></st:customInput>
+			</h:form>
+		</ui:define> 
+	</ui:composition>
+
+
+</h:body>
+</html>
